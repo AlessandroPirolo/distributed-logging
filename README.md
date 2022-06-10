@@ -11,5 +11,8 @@ The system is resilient and the receiving of logs is guaranteed, meaning that if
 must keep sending the log until it receives an acknowledgement message. 
 
 # Technologies
-The project is developed in **Kotlin** and **Scala**. And it uses **Eclipse** **Mosquito** message broker through which each component
-can communicate with the central one.
+[Kotlin](https://kotlinlang.org/): version 1.7.0
+
+[Scala](https://www.scala-lang.org/): version 3.1.2
+
+[Eclipse Mosquitto](https://mosquitto.org/): version 2.0.14
