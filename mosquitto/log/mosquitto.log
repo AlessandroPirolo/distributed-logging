@@ -1,0 +1,269 @@
+1659964248: mosquitto version 2.0.14 starting
+1659964248: Config loaded from /mosquitto/config/mosquitto.conf.
+1659964248: Opening ipv4 listen socket on port 1883.
+1659964248: Opening ipv6 listen socket on port 1883.
+1659964248: Opening websockets listen socket on port 9001.
+1659964248: mosquitto version 2.0.14 running
+1659964655: New connection from 172.21.0.1:35928 on port 1883.
+1659964655: Client mqttx_43a7cd50 disconnected, not authorised.
+1659964735: New connection from 172.21.0.1:36544 on port 1883.
+1659964735: Client mqttx_43a7cd50 disconnected, not authorised.
+1659965020: New connection from 172.21.0.1:38724 on port 1883.
+1659965020: Client mqttx_33786a92 disconnected, not authorised.
+1659965287: New connection from 172.21.0.1:40804 on port 1883.
+1659965287: Client <unknown> disconnected due to malformed packet.
+1659965287: New connection from 172.21.0.1:40806 on port 1883.
+1659965287: Client <unknown> disconnected due to malformed packet.
+1659965287: New connection from 172.21.0.1:40808 on port 1883.
+1659965287: Client <unknown> disconnected due to malformed packet.
+1659965287: New connection from 172.21.0.1:40810 on port 1883.
+1659965287: Client <unknown> disconnected due to malformed packet.
+1659965287: New connection from 172.21.0.1:40812 on port 1883.
+1659965287: Client <unknown> disconnected due to malformed packet.
+1659965287: New connection from 172.21.0.1:40814 on port 1883.
+1659965287: Client <unknown> disconnected due to malformed packet.
+1659965287: New connection from 172.21.0.1:40816 on port 1883.
+1659965288: Client <unknown> disconnected due to malformed packet.
+1659965288: New connection from 172.21.0.1:40818 on port 1883.
+1659965288: Client <unknown> disconnected due to malformed packet.
+1659965288: New connection from 172.21.0.1:40820 on port 1883.
+1659965288: Client <unknown> disconnected due to malformed packet.
+1659965288: New connection from 172.21.0.1:40822 on port 1883.
+1659965288: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40842 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40844 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40846 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40848 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40850 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40852 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40854 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40856 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40858 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965290: New connection from 172.21.0.1:40860 on port 1883.
+1659965290: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40892 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40894 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40896 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40898 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40900 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40902 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40904 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40906 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40908 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965294: New connection from 172.21.0.1:40910 on port 1883.
+1659965294: Client <unknown> disconnected due to malformed packet.
+1659965386: mosquitto version 2.0.14 terminating
+1659965386: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1660053575: mosquitto version 2.0.14 starting
+1660053575: Config loaded from /mosquitto/config/mosquitto.conf.
+1660053575: Opening ipv4 listen socket on port 1883.
+1660053575: Opening ipv6 listen socket on port 1883.
+1660053575: Opening websockets listen socket on port 9001.
+1660053575: mosquitto version 2.0.14 running
+1660053634: mosquitto version 2.0.14 terminating
+1660053634: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1660053639: mosquitto version 2.0.14 starting
+1660053639: Config loaded from /mosquitto/config/mosquitto.conf.
+1660053639: Opening ipv4 listen socket on port 1883.
+1660053639: Opening ipv6 listen socket on port 1883.
+1660053639: Opening websockets listen socket on port 9001.
+1660053639: mosquitto version 2.0.14 running
+1660053660: New connection from 172.21.0.1:36618 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36622 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36624 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36626 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36628 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36630 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36632 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36638 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36640 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053660: New connection from 172.21.0.1:36642 on port 1883.
+1660053660: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37198 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37200 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37202 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37206 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37208 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37210 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37212 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37214 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37216 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660053733: New connection from 172.21.0.1:37218 on port 1883.
+1660053733: Client <unknown> disconnected due to malformed packet.
+1660055440: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1660055679: New connection from 172.21.0.1:52104 on port 1883.
+1660055679: Client paho20928234691400 disconnected, not authorised.
+1660055679: New connection from 172.21.0.1:52106 on port 1883.
+1660055680: Client paho20928234691400 disconnected, not authorised.
+1660055778: New connection from 172.21.0.1:52856 on port 1883.
+1660055778: Client paho21026668960300 disconnected, not authorised.
+1660055778: New connection from 172.21.0.1:52860 on port 1883.
+1660055778: Client paho21026668960300 disconnected, not authorised.
+1660056428: New connection from 172.21.0.1:57852 on port 1883.
+1660056428: Client auto-1A67F311-8681-6751-7A1E-25F42A864991 disconnected, not authorised.
+1660056541: New connection from 172.21.0.1:58712 on port 1883.
+1660056541: Client auto-A5DFCC15-6EBE-A2FF-2ED0-4E1FA66369D4 disconnected, not authorised.
+1660056643: mosquitto version 2.0.14 terminating
+1660056643: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1660056657: mosquitto version 2.0.14 starting
+1660056657: Config loaded from /mosquitto/config/mosquitto.conf.
+1660056657: Opening ipv4 listen socket on port 1883.
+1660056657: Opening ipv6 listen socket on port 1883.
+1660056657: Opening ipv4 listen socket on port 9001.
+1660056657: Opening ipv6 listen socket on port 9001.
+1660056657: mosquitto version 2.0.14 running
+1660056661: New connection from 172.21.0.1:59634 on port 1883.
+1660056661: New client connected from 172.21.0.1:59634 as auto-04888889-DE19-3A7A-5D20-082EDD7B0A8D (p2, c1, k60).
+1660056846: Client auto-04888889-DE19-3A7A-5D20-082EDD7B0A8D closed its connection.
+1660056848: New connection from 172.21.0.1:32848 on port 1883.
+1660056848: New client connected from 172.21.0.1:32848 as auto-DB275D21-12C2-45FC-D497-EF91DDC2327C (p2, c1, k60).
+1660056855: Client auto-DB275D21-12C2-45FC-D497-EF91DDC2327C closed its connection.
+1660056880: New connection from 172.21.0.1:33094 on port 1883.
+1660056880: New client connected from 172.21.0.1:33094 as auto-BA6F757A-CAA4-13BA-59E4-CD0A097FDCB7 (p2, c1, k60).
+1660056880: Client auto-BA6F757A-CAA4-13BA-59E4-CD0A097FDCB7 disconnected.
+1660056886: New connection from 172.21.0.1:33138 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33142 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33144 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33146 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33148 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33150 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33152 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33154 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33156 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660056886: New connection from 172.21.0.1:33158 on port 1883.
+1660056886: Client <unknown> disconnected due to malformed packet.
+1660057066: New connection from 172.21.0.1:34534 on port 1883.
+1660057066: New client connected from 172.21.0.1:34534 as auto-2404F038-C0B0-C4FB-0EE0-EC19125D0979 (p2, c1, k60).
+1660057119: New connection from 172.21.0.1:34944 on port 1883.
+1660057119: New client connected from 172.21.0.1:34944 as auto-62DADC37-0286-462C-AF97-182C256518FB (p2, c1, k60).
+1660057119: Client auto-62DADC37-0286-462C-AF97-182C256518FB disconnected.
+1660057128: Client auto-2404F038-C0B0-C4FB-0EE0-EC19125D0979 closed its connection.
+1660057205: New connection from 172.21.0.1:35612 on port 1883.
+1660057206: New client connected from 172.21.0.1:35612 as paho22454379269300 (p2, c1, k60).
+1660057633: Client paho22454379269300 closed its connection.
+1660057639: New connection from 172.21.0.1:38932 on port 1883.
+1660057639: New client connected from 172.21.0.1:38932 as paho22887898239800 (p2, c1, k60).
+1660057795: New connection from 172.21.0.1:40128 on port 1883.
+1660057795: New client connected from 172.21.0.1:40128 as auto-449EEBCF-62ED-1BB2-36A4-EDAD89C0C4F3 (p2, c1, k60).
+1660057826: Client paho22887898239800 closed its connection.
+1660057840: New connection from 172.21.0.1:40480 on port 1883.
+1660057841: New client connected from 172.21.0.1:40480 as paho23089606899700 (p2, c1, k60).
+1660057867: Client paho23089606899700 closed its connection.
+1660057875: New connection from 172.21.0.1:40744 on port 1883.
+1660057875: New client connected from 172.21.0.1:40744 as paho23123720837600 (p2, c1, k60).
+1660057889: Client paho23123720837600 closed its connection.
+1660058441: New connection from 172.21.0.1:45078 on port 1883.
+1660058441: New client connected from 172.21.0.1:45078 as paho23690053943500 (p2, c1, k60).
+1660058456: Client paho23690053943500 closed its connection.
+1660058458: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1660058462: New connection from 172.21.0.1:42750 on port 9001.
+1660058462: New client connected from 172.21.0.1:42750 as paho23710671304500 (p2, c1, k60).
+1660058491: New connection from 172.21.0.1:45464 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45466 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45468 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45470 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45472 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45474 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45476 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45480 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45484 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058491: New connection from 172.21.0.1:45486 on port 1883.
+1660058491: Client <unknown> disconnected due to malformed packet.
+1660058506: Client paho23710671304500 closed its connection.
+1660058562: New connection from 172.21.0.1:46020 on port 1883.
+1660058562: New client connected from 172.21.0.1:46020 as paho23810771580800 (p2, c1, k60).
+1660058635: Client paho23810771580800 closed its connection.
+1660058639: New connection from 172.21.0.1:46618 on port 1883.
+1660058639: New client connected from 172.21.0.1:46618 as paho23888159156600 (p2, c1, k60).
+1660058643: Client paho23888159156600 closed its connection.
+1660058727: New connection from 172.21.0.1:47288 on port 1883.
+1660058728: New client connected from 172.21.0.1:47288 as paho23976498006900 (p2, c1, k60).
+1660058733: Client paho23976498006900 closed its connection.
+1660058765: New connection from 172.21.0.1:47580 on port 1883.
+1660058765: New client connected from 172.21.0.1:47580 as paho24014182509800 (p2, c1, k60).
+1660058834: Client paho24014182509800 closed its connection.
+1660058839: New connection from 172.21.0.1:48146 on port 1883.
+1660058840: New client connected from 172.21.0.1:48146 as paho24088332881200 (p2, c1, k60).
+1660058874: Client paho24088332881200 closed its connection.
+1660058877: New connection from 172.21.0.1:48438 on port 1883.
+1660058878: New client connected from 172.21.0.1:48438 as paho24126447794000 (p2, c1, k60).
+1660058905: Client paho24126447794000 closed its connection.
+1660058910: New connection from 172.21.0.1:48688 on port 1883.
+1660058910: New client connected from 172.21.0.1:48688 as paho24158804376700 (p2, c1, k60).
+1660058946: Client paho24158804376700 closed its connection.
+1660058950: New connection from 172.21.0.1:48996 on port 1883.
+1660058950: New client connected from 172.21.0.1:48996 as paho24198934976200 (p2, c1, k60).
+1660059040: Client paho24198934976200 closed its connection.
+1660059092: New connection from 172.21.0.1:50084 on port 1883.
+1660059092: New client connected from 172.21.0.1:50084 as paho24340644871500 (p2, c1, k60).
+1660059188: Client paho24340644871500 closed its connection.
+1660059197: New connection from 172.21.0.1:50886 on port 1883.
+1660059197: New client connected from 172.21.0.1:50886 as paho24445812126900 (p2, c1, k60).
+1660059374: Client paho24445812126900 closed its connection.
+1660059379: New connection from 172.21.0.1:52288 on port 1883.
+1660059379: New client connected from 172.21.0.1:52288 as paho24627611248900 (p2, c1, k60).
+1660059386: Client paho24627611248900 closed its connection.
+1660059944: New connection from 172.21.0.1:56614 on port 1883.
+1660059945: New client connected from 172.21.0.1:56614 as paho25193500310800 (p2, c1, k60).
+1660060259: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1660060430: Client paho25193500310800 closed its connection.
+1660060447: New connection from 172.21.0.1:60456 on port 1883.
+1660060447: New client connected from 172.21.0.1:60456 as paho25696215606800 (p2, c1, k60).
+1660060532: Client paho25696215606800 closed its connection.
+1660060535: New connection from 172.21.0.1:32906 on port 1883.
+1660060535: New client connected from 172.21.0.1:32906 as paho25784147702100 (p2, c1, k60).
+1660060560: Client paho25784147702100 closed its connection.
