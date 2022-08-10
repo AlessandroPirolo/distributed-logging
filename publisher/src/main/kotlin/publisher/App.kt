@@ -11,6 +11,14 @@ class MqttPublisher() {
 
     private var client: MqttClient = MqttClient("tcp://127.0.0.1:1883", MqttClient.generateClientId())
 
+    fun run() {
+        connect("tcp://127.0.0.1:1883")
+        isConnected()
+        subscribeTopic("ciao")
+        publishMessage("ciao", "ciao")
+        client.disconnect()
+    }
+
     fun connect(broker: String) {
 
         try {
@@ -60,7 +68,7 @@ class MqttPublisher() {
 
     }
 
-    fun subscribeTopic(topic: String, qos: Int = 1) {
+    fun subscribeTopic(topic: String = client.clientId, qos: Int = 1) {
             client.subscribe(topic, qos)
 
     }
@@ -77,9 +85,6 @@ class MqttPublisher() {
 }
 
 fun main() {
-    MqttPublisher().connect("tcp://localhost:1883")
-    MqttPublisher().isConnected()
-    MqttPublisher().publishMessage("ciao", "ciao")
-    MqttPublisher().close()
+    MqttPublisher().run()
 }
 
