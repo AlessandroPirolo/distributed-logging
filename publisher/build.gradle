@@ -1,6 +1,5 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.7.10"
-
 }
 
 repositories {
@@ -15,5 +14,14 @@ dependencies {
     implementation("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    implementation("com.google.protobuf:protobuf-kotlin:3.21.5")
+
 }
 
+task preBuildTask(type: Exec) {
+    commandLine 'proto', '''--proto_path=.\\distributed-logging\\publisher\\src\\main\\protobuf
+            --java_out=.\\distributed-logging\\publisher\\src\\main\\java
+            --kotlin_out=.\\Documents\\GitHub\\distributed-logging\\publisher\\src\\main\\kotlin
+            .\\Documents\\GitHub\\distributed-logging\\publisher\\src\\main\\protobuf\\log.proto'''
+}

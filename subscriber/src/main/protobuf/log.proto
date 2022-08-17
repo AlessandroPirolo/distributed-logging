@@ -1,0 +1,28 @@
+syntax = "proto3";
+package protobuf;
+
+import "google/protobuf/timestamp.proto";
+
+message Log {
+  enum LogLevel {
+    TRACE = 0;
+    DEBUG = 1;
+    INFORMATION = 2;
+    WARNING = 3;
+    ERROR = 4;
+    CRITICAL = 5;
+    NONE = 6;
+  }
+
+  message Tag {
+    string key = 1;
+    string value = 2;
+  }
+
+  LogLevel logLevel = 1;
+  string msg = 2;
+  repeated Tag tag = 3;
+  google.protobuf.Timestamp timeStamp = 4;
+
+
+}
