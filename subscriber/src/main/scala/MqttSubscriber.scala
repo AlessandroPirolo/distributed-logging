@@ -7,10 +7,9 @@ import akka.stream.scaladsl.{Keep, Sink}
 import akka.util.ByteString
 import com.google.protobuf.timestamp.Timestamp
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence
-
 import java.time.{Instant, ZoneId}
-import protobuf.log.Log.LogLevel
 import protobuf.log.Log.Tag
+import protobuf.log.Log.LogLevel
 import protobuf.log.Log
 
 object MqttSubscriber {
@@ -19,11 +18,12 @@ object MqttSubscriber {
 
   final case class Start() extends Event
   final case class Stop() extends Event
+  final case class Quit() extends Event
 
   sealed trait Data
 
   final case class Tostop(killSwitch: UniqueKillSwitch, materializer: Materializer) extends Data
-  final case class LogRecord(logLevel: Integer, msg: String, tags: Map[String, String]) extends Data {
+  final case class LogRecord(logLevel: Int, msg: String, tags: Map[String, String]) extends Data {
     private val tmpTags: List[Tag] = tags.map( el => Tag(el._1, el._2)).toList
 
     private val tmpLogLevel = logLevel match {
@@ -56,7 +56,7 @@ object MqttSubscriber {
 
   private def parseFrom(byteString: ByteString): LogRecord = {
     val tmpLog = Log.parseFrom(byteString.toArrayUnsafe())
-    LogRecord(tmpLog.logLevel.value, tmpLog.msg, tmpLog.tag)
+    LogRecord(tmpLog.logLevel.value, tmpLog.msg, tmpLog.tag.map(tag => tag.key -> tag.value).toMap)
   }
 
   //implicit private val system: ActorSystem = ActorSystem("QuickStart")
@@ -76,7 +76,7 @@ object MqttSubscriber {
   ).viaMat(KillSwitches.single)(Keep.right)
     .toMat(Sink.foreach(m => {
       val log = parseFrom(m.message.payload)
-      print(log.toString)
+      println(log.toString)
     })
     )(Keep.left)
 
@@ -90,6 +90,9 @@ object MqttSubscriber {
       println("Press s to stop")
       val killSwitch = graph.run()
       running(Tostop(killSwitch, materializer))
+    case Quit() =>
+      println("Killing the service...")
+      Behaviors.stopped
     case _ =>
       println("Behavior unhandled")
       Behaviors.unhandled
@@ -102,6 +105,9 @@ object MqttSubscriber {
         println("Press v to restart")
         data.killSwitch.shutdown()
         idle(data.materializer)
+      case Quit() =>
+        println("Killing the service...")
+        Behaviors.stopped
       case _ =>
         println("Behavior unhandled")
         Behaviors.unhandled

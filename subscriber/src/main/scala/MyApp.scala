@@ -14,7 +14,7 @@ object MyApp extends App {
      case "s" =>  mqttSubscriber ! MqttSubscriber.Stop()
      case "v" =>  mqttSubscriber ! MqttSubscriber.Start() //to restart use supervisor strategy
      case "q" => {
-       mqttSubscriber ! MqttSubscriber.Stop()
+       mqttSubscriber ! MqttSubscriber.Quit()
        sys.exit(0)
      }
      case _ => println("nulla")

@@ -44,7 +44,9 @@ object App {
             this.timeStamp = Timestamp.newBuilder().setSeconds( now.epochSecond).setNanos(now.nano).build()
         }
 
-
+        fun getLog(): Log {
+            return log
+        }
         override fun toString(): String {
             val date = Instant
                 .ofEpochSecond( this.log.timeStamp.seconds, this.log.timeStamp.nanos.toLong())
@@ -124,7 +126,7 @@ object App {
                 try {
                     val msg: LogRecord = LogRecord(2, "ciao", mapOf("id" to "ciao") )
                     val message = MqttMessage()
-                    message.payload = msg.toByteArray()
+                    message.payload = msg.getLog().toByteArray()
                     client.publish(topic, message.payload, 1, true)
                     println("*** $msg published to $topic")
                 } catch (e: MqttException) {
