@@ -23,7 +23,7 @@ object MqttSubscriber {
   sealed trait Data
 
   final case class Tostop(killSwitch: UniqueKillSwitch, materializer: Materializer) extends Data
-  final case class LogRecord(logLevel: Int, msg: String, tags: Map[String, String]) extends Data {
+  final case class LogRecord(logLevel: Int, msg: String, tags: Map[String, String], timestamp: Timestamp) extends Data {
     private val tmpTags: List[Tag] = tags.map( el => Tag(el._1, el._2)).toList
 
     private val tmpLogLevel = logLevel match {
@@ -37,9 +37,7 @@ object MqttSubscriber {
       case _ => LogLevel.INFORMATION
     }
 
-    private val now = Instant.now()
-
-    private val log = Log(tmpLogLevel, msg, tmpTags, Some(Timestamp.apply(now.getEpochSecond, now.getNano)))
+    private val log = Log(tmpLogLevel, msg, tmpTags, Some(timestamp))
 
     override def toString: String = {
       val date = Instant
@@ -56,7 +54,7 @@ object MqttSubscriber {
 
   private def parseFrom(byteString: ByteString): LogRecord = {
     val tmpLog = Log.parseFrom(byteString.toArrayUnsafe())
-    LogRecord(tmpLog.logLevel.value, tmpLog.msg, tmpLog.tag.map(tag => tag.key -> tag.value).toMap)
+    LogRecord(tmpLog.logLevel.value, tmpLog.msg, tmpLog.tag.map(tag => tag.key -> tag.value).toMap, log.timeStamp)
   }
 
   //implicit private val system: ActorSystem = ActorSystem("QuickStart")

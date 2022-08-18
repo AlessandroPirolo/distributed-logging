@@ -1,73 +1,16 @@
 package publisher
 
-import com.google.protobuf.Timestamp
+
 import kotlinx.coroutines.*
 import org.eclipse.paho.client.mqttv3.*
-import publisher.protobuf.LogKt.tag
-import publisher.protobuf.LogOuterClass.Log
-import publisher.protobuf.LogOuterClass.Log.LogLevel
-import publisher.protobuf.LogOuterClass.Log.Tag
-import publisher.protobuf.log
-import java.time.Instant
+import publisher.impl.SharedLoggerFactory
+import publisher.serialization.LogRecordPBSerializer
 import java.time.LocalDateTime
-import java.time.ZoneId
 import kotlin.system.exitProcess
 
 object App {
 
-    data class LogRecord(val logLevel: Int, val msg: String, val tags: Map<String, String> = mapOf()) {
 
-        private val tmpTags: List<Tag> = tags.map {
-            tag {
-                this.key = it.key
-                this.value = it.value
-            }
-        }
-
-        private val tmpLogLevel = when(logLevel) {
-            0 -> LogLevel.TRACE
-            1 -> LogLevel.DEBUG
-            2 -> LogLevel.INFORMATION
-            3 -> LogLevel.WARNING
-            4 -> LogLevel.ERROR
-            5 -> LogLevel.CRITICAL
-            6 -> LogLevel.NONE
-            else -> LogLevel.INFORMATION
-        }
-
-        private val now: Instant = Instant.now()
-
-        private val log = log {
-            this.tag += tmpTags
-            this.logLevel = tmpLogLevel
-            this.msg = msg
-            this.timeStamp = Timestamp.newBuilder().setSeconds( now.epochSecond).setNanos(now.nano).build()
-        }
-
-        fun getLog(): Log {
-            return log
-        }
-        override fun toString(): String {
-            val date = Instant
-                .ofEpochSecond( this.log.timeStamp.seconds, this.log.timeStamp.nanos.toLong())
-                .atZone( ZoneId.of( "Europe/Rome" ) )
-                .toLocalDateTime()
-
-            return this.log.logLevel.toString() +
-                    " " + date.toString()+
-                    " " + this.log.msg +
-                    " " + this.log.tagList.toString()
-        }
-
-        fun toByteArray(): ByteArray {
-            return this.log.toByteArray()
-        }
-    }
-
-    private fun parseFrom(array: ByteArray): LogRecord? {
-        val log: Log = Log.parseFrom(array)
-        return LogRecord(log.logLevel.number, log.msg, log.tagList.associate { it.key to it.value })
-    }
 
     fun begin() {
         consoleMessage("press G to start pinging or Q to quit"){
@@ -85,54 +28,21 @@ object App {
         val qos = 1
 
         /** Trying to connect to the broker **/
-        try {
-            val option = MqttConnectOptions()
-            option.isCleanSession = true
-
-            client.setCallback(object : MqttCallbackExtended {
-                override fun connectComplete(reconnect: Boolean, serverURI: String?) {
-                    println("conn Comple")
-                    println("Connected to: $serverURI")
-                }
-
-                override fun connectionLost(cause: Throwable) {
-                    println("The Connection was lost.")
-                }
-
-
-                @Throws(Exception::class)
-                override fun messageArrived(topic: String, message: MqttMessage) {
-                    println("Incoming message from $topic: ${parseFrom(message.payload).toString()}")
-                }
-
-                override fun deliveryComplete(token: IMqttDeliveryToken) {
-
-                }
-            })
-            client.connect(option)
-        } catch (e: MqttException) {
-            println("e")
-            e.printStackTrace()
-        }
-
+        val factory = SharedLoggerFactory(client, topic, LogRecordPBSerializer())
+        val factory1 = factory.simpleMqttSharedLogger(client, topic, MqttConnectOptions(), LogRecordPBSerializer())
 
         /** Subscription to topic **/
-        client.subscribe(topic, qos)
+
+        //var logQueue: SynchronousQueue<LogRecord> = SynchronousQueue()
 
         GlobalScope.launch {
-
             while (isActive) {
                 /** Trying to publish a message **/
-                try {
-                    val msg: LogRecord = LogRecord(2, "ciao", mapOf("id" to "ciao") )
-                    val message = MqttMessage()
-                    message.payload = msg.getLog().toByteArray()
-                    client.publish(topic, message.payload, 1, true)
-                    println("*** $msg published to $topic")
-                } catch (e: MqttException) {
-                    println("Error Publishing to $topic: " + e.message)
-                    e.printStackTrace()
-                }
+                val msg: LogRecord = LogRecord(2, "salve, sono un log", mapOf("id" to "ciao"), getNow())
+                factory1.put(msg)
+                //println("Created log Record")
+                //log(msg, logQueue, client, "ciao")
+
                 delay(2000L)
             }
         }.also { job ->
@@ -153,6 +63,53 @@ object App {
 
     }
 
+    private fun getNow(): LocalDateTime {
+        return LocalDateTime.now()
+    }
+
+    /*private fun queue(log: LogRecord, queue: SynchronousQueue<LogRecord>): SynchronousQueue<LogRecord> {
+        val queueSize = queue.size
+        println("Checking queue size")
+        if(queueSize > 19)    {
+            println("Queue size not ok")
+            val numLogToRem = queueSize - 19 + 1
+            for (i in 0..numLogToRem) {
+                queue.poll()
+            }
+            val warnLog = LogRecord(3,"Removed $numLogToRem logs", log.tags, getNow())
+            queue.put(warnLog)
+        }
+        else    {
+            println("Queue size ok")
+            queue.add(log)
+            println("add log to Queue")
+        }
+        return queue
+    }*/
+
+    /*private fun log(log: LogRecord, logQueue: SynchronousQueue<LogRecord>, client: MqttClient, topic: String): Unit {
+        queue(log, logQueue)
+        println("Queued log to the queue")
+        GlobalScope.launch {
+            while (isActive) {
+                /** Trying to publish a message **/
+                try {
+                    println("Checking if queue isn't empty")
+                    while (logQueue.isNotEmpty()) {
+                        val message = MqttMessage()
+                        message.payload = logQueue.poll().getLog().toByteArray()
+                        client.publish(topic, message.payload, 1, true)
+                        println("*** ${log.toString()} published to $topic ***")
+                    }
+                } catch (e: MqttException) {
+                    println("Error Publishing to $topic: " + e.message)
+                    e.printStackTrace()
+                }
+                delay(2000L)
+            }
+        }
+    }*/
+
     fun quit() {
         println("goodbye")
         exitProcess(0)
@@ -163,16 +120,6 @@ object App {
         f(readLine())
         return consoleMessage(msg, f)
     }
-
-    fun generateTag(_key: String, _value: String): Tag {
-        return tag {
-            this.key = _key
-            this.value = _value
-        }
-    }
-
-
-
 
     @JvmStatic
     fun main(args: Array<String>) {
