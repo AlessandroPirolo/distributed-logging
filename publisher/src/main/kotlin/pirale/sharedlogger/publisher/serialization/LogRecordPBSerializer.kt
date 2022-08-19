@@ -1,14 +1,13 @@
-package publisher.serialization
+package pirale.sharedlogger.publisher.serialization
 
 import com.google.protobuf.Timestamp
-import publisher.App
-import publisher.LogRecord
-import publisher.LogRecordSerializer
-import publisher.protobuf.LogOuterClass.Log
-import publisher.protobuf.LogOuterClass.Log.LogLevel
-import publisher.protobuf.LogOuterClass.Log.Tag
-import publisher.serialization.protobuf.LogKt
-import publisher.serialization.protobuf.log
+import pirale.sharedlogger.publisher.LogRecord
+import pirale.sharedlogger.publisher.LogRecordSerializer
+import pirale.sharedlogger.publisher.protobuf.LogOuterClass.Log
+import pirale.sharedlogger.publisher.protobuf.LogOuterClass.Log.LogLevel
+import pirale.sharedlogger.publisher.protobuf.LogOuterClass.Log.Tag
+import pirale.sharedlogger.publisher.serialization.protobuf.LogKt
+import pirale.sharedlogger.publisher.serialization.protobuf.log
 import java.time.Instant
 import java.time.LocalDateTime
 import java.time.ZoneId

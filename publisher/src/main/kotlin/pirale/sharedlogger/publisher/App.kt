@@ -1,12 +1,10 @@
-package publisher
+package pirale.sharedlogger.publisher
 
 
 import kotlinx.coroutines.*
-import org.eclipse.paho.client.mqttv3.*
-import publisher.impl.SharedLoggerFactory
-import publisher.serialization.LogRecordPBSerializer
 import java.time.LocalDateTime
 import kotlin.system.exitProcess
+
 
 object App {
 
@@ -23,13 +21,14 @@ object App {
     }
 
     fun startPing() {
-        var client = MqttClient("tcp://127.0.0.1:1883", MqttClient.generateClientId())
+        /*var client = MqttClient("tcp://127.0.0.1:1883", MqttClient.generateClientId())
         val topic = "ciao"
         val qos = 1
+*/
+        val msg = LogRecord(2, "salve, son un log", mapOf("id" to "ciao"), getNow())
 
         /** Trying to connect to the broker **/
-        val factory = SharedLoggerFactory(client, topic, LogRecordPBSerializer())
-        val factory1 = factory.simpleMqttSharedLogger(client, topic, MqttConnectOptions(), LogRecordPBSerializer())
+        val sharedLogger: SharedLogger = SharedLoggerFactory().create()
 
         /** Subscription to topic **/
 
@@ -37,11 +36,7 @@ object App {
 
         GlobalScope.launch {
             while (isActive) {
-                /** Trying to publish a message **/
-                val msg: LogRecord = LogRecord(2, "salve, sono un log", mapOf("id" to "ciao"), getNow())
-                factory1.put(msg)
-                //println("Created log Record")
-                //log(msg, logQueue, client, "ciao")
+                sharedLogger.put(msg)
 
                 delay(2000L)
             }
@@ -60,9 +55,7 @@ object App {
                 }
             }
         }
-
     }
-
     private fun getNow(): LocalDateTime {
         return LocalDateTime.now()
     }
@@ -110,12 +103,12 @@ object App {
         }
     }*/
 
-    fun quit() {
+    private fun quit() {
         println("goodbye")
         exitProcess(0)
     }
 
-    tailrec fun consoleMessage(msg: String, f: (String?) -> Unit) {
+    private tailrec fun consoleMessage(msg: String, f: (String?) -> Unit) {
         println(msg)
         f(readLine())
         return consoleMessage(msg, f)

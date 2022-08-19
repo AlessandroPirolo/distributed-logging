@@ -1,4 +1,4 @@
-package publisher
+package pirale.sharedlogger.publisher
 
 import java.time.LocalDateTime
 

@@ -1,18 +1,29 @@
-package publisher.impl
+package pirale.sharedlogger.publisher
 
 import org.eclipse.paho.client.mqttv3.*
-import publisher.LogRecord
-import publisher.LogRecordSerializer
-import publisher.SharedLogger
-import publisher.serialization.LogRecordPBSerializer
+import pirale.sharedlogger.publisher.impl.DummySharedLogger
+import pirale.sharedlogger.publisher.impl.QueuedSharedLogger
+import pirale.sharedlogger.publisher.impl.SimpleSharedLogger
+import pirale.sharedlogger.publisher.serialization.LogRecordPBSerializer
 
-class SharedLoggerFactory(client: MqttClient, topic: String, serializer: LogRecordSerializer) : SharedLogger {
+class SharedLoggerFactory {
+    fun create(): SharedLogger {
+        return when(System.getProperties()["type"]) {
+            "dummy" -> DummySharedLogger()
+            "simple" -> {
+                val client = MqttClient(System.getProperties()["client"].toString(), MqttClient.generateClientId())
+                SimpleSharedLogger(client, System.getProperties()["topic"].toString(), MqttConnectOptions(), LogRecordPBSerializer())
+            }
+            "queued" -> QueuedSharedLogger()
+            else -> {
+                val client = MqttClient(System.getProperties()["client"].toString(), MqttClient.generateClientId())
+                SimpleSharedLogger(client, System.getProperties()["topic"].toString(), MqttConnectOptions(), LogRecordPBSerializer())
+            }
+        }
 
-    val _client = client
-    val _topic = topic
-    val _serializer = serializer
+    }
 
-    fun simpleMqttSharedLogger(client: MqttClient, topic: String, options: MqttConnectOptions, serializer: LogRecordSerializer): SharedLogger {
+    /*fun simpleMqttSharedLogger(client: MqttClient, topic: String, options: MqttConnectOptions, serializer: LogRecordSerializer): SharedLogger {
         try {
             client.setCallback(object : MqttCallbackExtended {
                 override fun connectComplete(reconnect: Boolean, serverURI: String?) {
@@ -35,7 +46,7 @@ class SharedLoggerFactory(client: MqttClient, topic: String, serializer: LogReco
             })
             client.connect(options)
         } catch (e: MqttException) {
-            println("e")
+            println(e)
             e.printStackTrace()
         }
 
@@ -61,5 +72,5 @@ class SharedLoggerFactory(client: MqttClient, topic: String, serializer: LogReco
             println("Error Publishing to $_topic: " + e.message)
             e.printStackTrace()
         }
-    }
+    }*/
 }
