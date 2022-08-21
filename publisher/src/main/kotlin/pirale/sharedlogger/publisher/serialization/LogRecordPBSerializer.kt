@@ -36,14 +36,14 @@ class LogRecordPBSerializer : LogRecordSerializer {
 
     private fun getLogLevel(logLevel: Int): LogLevel {
         return when(logLevel) {
-            0 -> Log.LogLevel.TRACE
-            1 -> Log.LogLevel.DEBUG
-            2 -> Log.LogLevel.INFORMATION
-            3 -> Log.LogLevel.WARNING
-            4 -> Log.LogLevel.ERROR
-            5 -> Log.LogLevel.CRITICAL
-            6 -> Log.LogLevel.NONE
-            else -> Log.LogLevel.INFORMATION
+            0 -> LogLevel.TRACE
+            1 -> LogLevel.DEBUG
+            2 -> LogLevel.INFORMATION
+            3 -> LogLevel.WARNING
+            4 -> LogLevel.ERROR
+            5 -> LogLevel.CRITICAL
+            6 -> LogLevel.NONE
+            else -> LogLevel.INFORMATION
         }
     }
 
