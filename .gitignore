@@ -14,3 +14,6 @@ build
 
 .bps/*
 
+# ignore all paho... folders but include paho... files
+paho*/
+
