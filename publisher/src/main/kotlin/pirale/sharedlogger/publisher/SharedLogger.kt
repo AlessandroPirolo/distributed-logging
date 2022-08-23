@@ -1,5 +1,5 @@
 package pirale.sharedlogger.publisher
 
 interface SharedLogger {
-    fun put(logRecord: LogRecord)
+    suspend fun put(logRecord: LogRecord)
 }

@@ -5,7 +5,7 @@ import pirale.sharedlogger.publisher.SharedLogger
 
 class DummySharedLogger : SharedLogger {
 
-    override fun put(logRecord: LogRecord) {
+    override suspend fun put(logRecord: LogRecord) {
         println(logRecord)
     }
 }

@@ -1,40 +1,63 @@
 package pirale.sharedlogger.publisher.impl
 
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.channels.ticker
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import org.eclipse.paho.client.mqttv3.MqttException
 import pirale.sharedlogger.publisher.LogRecord
-import pirale.sharedlogger.publisher.SendChannel
 import pirale.sharedlogger.publisher.SharedLogger
+import pirale.sharedlogger.publisher.mqtt.LogRecordListMqttClient
+import java.time.Instant
 
-class QueuedSharedLogger(private val sender: SendChannel) : SharedLogger {
-
-    /*private var counter = 0
-
-    private fun queue(logRecord: LogRecord, queue: Queue<LogRecord>) {
-        if(queue.count() > 20) {
-            println("Too much element.")
-            for (i in 0..elToDeleteNum) {
-                val log = queue.remove()
-                if(!log.tags.containsValue("logs removed"))  {
-                    counter++
-                }
+class QueuedSharedLogger(private val mqttClient: LogRecordListMqttClient, size: Int, delayMillis: Long) : SharedLogger {
+    private val channel: Channel<LogRecord>
+    private val flow: Flow<List<LogRecord>>
+    private lateinit var errorLog : LogRecord
+    init {
+        this.channel = Channel<LogRecord>(size)
+        val list = mutableListOf<LogRecord>()
+        var lastSubmission = Instant.now()
+        var last: LogRecord? = null
+        val ticker = ticker(delayMillis,0).receiveAsFlow().map { Instant.now() }
+        this.flow = channel.receiveAsFlow().combineTransform(ticker) { lr, t ->
+            if (lr !== last) {
+                list.add(lr)
+                last = lr
             }
-            val warnLog = LogRecord(3, "$counter log records have been lost", mapOf("type" to "logs removed"), LocalDateTime.now())
-            queue.add(warnLog)
+            val emitCondition = list.count() == 10 ||
+                    (list.isNotEmpty() && lastSubmission.isBefore(t.minusMillis(50)))
+            if (emitCondition) {
+                emit(list)
+                lastSubmission = Instant.now()
+                list.clear()
+            }
+        }.onEach { lrs ->
+            try {
+
+                //val logQueue = LinkedBlockingQueue<List<LogRecord>>(1)
+                //logQueue.add(lrs)
+                //mqttClient.publish(logQueue)
+                mqttClient.publish(lrs)
+            } catch (e: MqttException) {
+                println("Failed to publish the message")
+                //errorLog = LogRecord(3, "${lrs.count()} messages have been lost", mapOf<String,String>("type" to "logs deleted"), LocalDateTime.now())
+            }
         }
-        println("Queuing...")
-        queue.add(logRecord)
-    }*/
 
-    override fun put(logRecord: LogRecord) {
-        /*GlobalScope.launch {
-            delay(1000)
-            (1 .. 100).forEach{channel.send("$it"); delay(5) }
-        }*/
+    }
 
-        // qua bisogna fare channel.send. Devo creare io una coda?
+    private suspend fun start() { this.flow.collect() }
+    override suspend fun put(logRecord: LogRecord) {
+        GlobalScope.launch {
+            start()
+            delay(10)
+        }
 
-        sender.send()
+        channel.send(logRecord)
+
     }
 }
