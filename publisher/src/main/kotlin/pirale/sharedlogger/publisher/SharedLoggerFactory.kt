@@ -1,5 +1,7 @@
 package pirale.sharedlogger.publisher
 
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import org.eclipse.paho.client.mqttv3.*
 import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence
 import pirale.sharedlogger.publisher.impl.DummySharedLogger

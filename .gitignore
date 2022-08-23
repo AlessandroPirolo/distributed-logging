@@ -7,13 +7,17 @@ build
 # Ignore vscode files
 .vscode/*
 
-# Ignore intelliJ files
-.idea/*
-
 .metals/*
-
-.bps/*
 
 # ignore all paho... folders but include paho... files
 paho*/
 
+*.class
+
+*.cache
+
+target
+
+.idea
+
+.bsp

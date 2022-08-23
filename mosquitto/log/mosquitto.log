@@ -1591,3 +1591,146 @@
 1661246873: Client paho959219052541600 closed its connection.
 1661246882: New connection from 172.21.0.1:34530 on port 1883.
 1661246883: New client connected from 172.21.0.1:34530 as paho959616974212600 (p2, c1, k60).
+1661254596: mosquitto version 2.0.15 starting
+1661254596: Config loaded from /mosquitto/config/mosquitto.conf.
+1661254596: Opening ipv4 listen socket on port 9001.
+1661254596: Opening ipv6 listen socket on port 9001.
+1661254596: Opening ipv4 listen socket on port 1883.
+1661254596: Opening ipv6 listen socket on port 1883.
+1661254596: mosquitto version 2.0.15 running
+1661254739: New connection from 172.19.0.1:64462 on port 1883.
+1661254739: New client connected from 172.19.0.1:64462 as paho47315090080766 (p2, c1, k60).
+1661254835: Client paho47315090080766 closed its connection.
+1661254982: New connection from 172.19.0.1:64464 on port 1883.
+1661254982: New client connected from 172.19.0.1:64464 as paho47557771662902 (p2, c1, k60).
+1661254985: Client paho47557771662902 closed its connection.
+1661255293: New connection from 172.19.0.1:64466 on port 1883.
+1661255294: New client connected from 172.19.0.1:64466 as paho47869765702101 (p2, c1, k60).
+1661255300: Client paho47869765702101 closed its connection.
+1661255360: New connection from 172.19.0.1:64468 on port 1883.
+1661255360: New client connected from 172.19.0.1:64468 as paho47936074590082 (p2, c1, k60).
+1661255363: Client paho47936074590082 closed its connection.
+1661255405: New connection from 172.19.0.1:64470 on port 1883.
+1661255405: New client connected from 172.19.0.1:64470 as paho47981267294696 (p2, c1, k60).
+1661255690: Client paho47981267294696 closed its connection.
+1661255693: New connection from 172.19.0.1:64472 on port 1883.
+1661255694: New client connected from 172.19.0.1:64472 as paho48269513940164 (p2, c1, k60).
+1661255740: Client paho48269513940164 closed its connection.
+1661255742: New connection from 172.19.0.1:64474 on port 1883.
+1661255742: New client connected from 172.19.0.1:64474 as paho48318378132625 (p2, c1, k60).
+1661255749: Client paho48318378132625 closed its connection.
+1661255791: New connection from 172.19.0.1:64476 on port 1883.
+1661255792: New client connected from 172.19.0.1:64476 as paho48367694521613 (p2, c1, k60).
+1661255797: Client paho48367694521613 closed its connection.
+1661255832: New connection from 172.19.0.1:64478 on port 1883.
+1661255832: New client connected from 172.19.0.1:64478 as paho48408322217438 (p2, c1, k60).
+1661255851: Client paho48408322217438 closed its connection.
+1661255918: New connection from 172.19.0.1:64480 on port 1883.
+1661255918: New client connected from 172.19.0.1:64480 as paho48494290185884 (p2, c1, k60).
+1661255928: Client paho48494290185884 closed its connection.
+1661256087: New connection from 172.19.0.1:64482 on port 1883.
+1661256087: New client connected from 172.19.0.1:64482 as paho48663148260428 (p2, c1, k60).
+1661256089: Client paho48663148260428 closed its connection.
+1661256313: New connection from 172.19.0.1:64484 on port 1883.
+1661256313: New client connected from 172.19.0.1:64484 as paho48889342968332 (p2, c1, k60).
+1661256316: Client paho48889342968332 closed its connection.
+1661256396: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1661256636: New connection from 172.19.0.1:64486 on port 1883.
+1661256636: New client connected from 172.19.0.1:64486 as paho49212410306851 (p2, c1, k60).
+1661256639: Client paho49212410306851 closed its connection.
+1661256865: New connection from 172.19.0.1:64488 on port 1883.
+1661256865: New client connected from 172.19.0.1:64488 as paho49441311416691 (p2, c1, k60).
+1661256872: Client paho49441311416691 closed its connection.
+1661256892: New connection from 172.19.0.1:64490 on port 1883.
+1661256892: New client connected from 172.19.0.1:64490 as paho49468272979554 (p2, c1, k60).
+1661256894: Client paho49468272979554 closed its connection.
+1661256895: New connection from 172.19.0.1:64492 on port 1883.
+1661256895: New client connected from 172.19.0.1:64492 as paho49470974739697 (p2, c1, k60).
+1661256896: Client paho49470974739697 closed its connection.
+1661257017: New connection from 172.19.0.1:64494 on port 1883.
+1661257017: New client connected from 172.19.0.1:64494 as paho49593364998333 (p2, c1, k60).
+1661257021: Client paho49593364998333 closed its connection.
+1661257045: New connection from 172.19.0.1:64496 on port 1883.
+1661257045: New client connected from 172.19.0.1:64496 as paho49621197435036 (p2, c1, k60).
+1661257048: Client paho49621197435036 closed its connection.
+1661257211: New connection from 172.19.0.1:64498 on port 1883.
+1661257211: New client connected from 172.19.0.1:64498 as paho49787114436732 (p2, c1, k60).
+1661257217: Client paho49787114436732 closed its connection.
+1661257275: New connection from 172.19.0.1:64500 on port 1883.
+1661257276: New client connected from 172.19.0.1:64500 as paho49851575236425 (p2, c1, k60).
+1661257285: Client paho49851575236425 closed its connection.
+1661257304: New connection from 172.19.0.1:64502 on port 1883.
+1661257304: New client connected from 172.19.0.1:64502 as paho49880135628981 (p2, c1, k60).
+1661257347: New connection from 172.19.0.1:64504 on port 1883.
+1661257347: Client <unknown> disconnected due to malformed packet.
+1661257347: New connection from 172.19.0.1:64506 on port 1883.
+1661257347: Client <unknown> disconnected due to malformed packet.
+1661257347: New connection from 172.19.0.1:64508 on port 1883.
+1661257347: Client <unknown> disconnected due to malformed packet.
+1661257461: New connection from 127.0.0.1:57862 on port 1883.
+1661257461: New client connected from 127.0.0.1:57862 as auto-44EDB846-7D62-A247-9054-8FFB75B6919A (p2, c1, k60).
+1661257484: Client paho49880135628981 closed its connection.
+1661257617: New connection from 127.0.0.1:57864 on port 1883.
+1661257617: New client connected from 127.0.0.1:57864 as auto-C5BF2F49-6CBF-23FC-DB22-0F70C8D52DA1 (p2, c1, k60).
+1661257631: New connection from 172.19.0.1:64514 on port 1883.
+1661257632: New client connected from 172.19.0.1:64514 as paho50207749130240 (p2, c1, k60).
+1661257698: Client paho50207749130240 closed its connection.
+1661257722: New connection from 172.19.0.1:64516 on port 1883.
+1661257722: New client connected from 172.19.0.1:64516 as paho50298287449002 (p2, c1, k60).
+1661257730: Client paho50298287449002 closed its connection.
+1661257777: New connection from 172.19.0.1:64518 on port 1883.
+1661257777: New client connected from 172.19.0.1:64518 as paho50353430465501 (p2, c1, k60).
+1661257790: Client paho50353430465501 closed its connection.
+1661257802: New connection from 172.19.0.1:64520 on port 1883.
+1661257802: New client connected from 172.19.0.1:64520 as paho50378171817573 (p2, c1, k60).
+1661257803: Client paho50378171817573 disconnected due to oversize packet.
+1661257817: New connection from 172.19.0.1:64522 on port 1883.
+1661257817: New client connected from 172.19.0.1:64522 as paho50393334654314 (p2, c1, k60).
+1661257818: Client paho50393334654314 disconnected due to oversize packet.
+1661257831: New connection from 172.19.0.1:64524 on port 1883.
+1661257832: New client connected from 172.19.0.1:64524 as paho50407568675915 (p2, c1, k60).
+1661257832: Client paho50407568675915 disconnected due to oversize packet.
+1661257845: Client auto-C5BF2F49-6CBF-23FC-DB22-0F70C8D52DA1 disconnected.
+1661257989: New connection from 172.19.0.1:64526 on port 1883.
+1661257990: New client connected from 172.19.0.1:64526 as paho50565491579994 (p2, c1, k60).
+1661257990: Client paho50565491579994 disconnected due to oversize packet.
+1661258107: New connection from 172.19.0.1:64528 on port 1883.
+1661258108: New client connected from 172.19.0.1:64528 as paho50683632026195 (p2, c1, k60).
+1661258108: Client paho50683632026195 disconnected due to oversize packet.
+1661258196: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1661258211: New connection from 172.19.0.1:64530 on port 1883.
+1661258211: New client connected from 172.19.0.1:64530 as paho50787344413884 (p2, c1, k60).
+1661258212: Client paho50787344413884 disconnected due to oversize packet.
+1661258225: New connection from 172.19.0.1:64532 on port 1883.
+1661258226: New client connected from 172.19.0.1:64532 as paho50801609942147 (p2, c1, k60).
+1661258226: Client paho50801609942147 disconnected due to oversize packet.
+1661258236: New connection from 127.0.0.1:57886 on port 1883.
+1661258236: New client connected from 127.0.0.1:57886 as auto-325A4943-D7DB-9596-2810-D3FE7276BEA1 (p2, c1, k60).
+1661258269: New connection from 127.0.0.1:57888 on port 1883.
+1661258269: New client connected from 127.0.0.1:57888 as auto-8B045948-1B3E-B867-2B88-9A547F784520 (p2, c1, k60).
+1661258288: New connection from 172.19.0.1:64538 on port 1883.
+1661258288: New client connected from 172.19.0.1:64538 as paho50863832697088 (p2, c1, k60).
+1661258288: Client paho50863832697088 disconnected due to oversize packet.
+1661258348: mosquitto version 2.0.15 terminating
+1661258348: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1661258349: mosquitto version 2.0.15 starting
+1661258349: Config loaded from /mosquitto/config/mosquitto.conf.
+1661258349: Opening ipv4 listen socket on port 9001.
+1661258349: Opening ipv6 listen socket on port 9001.
+1661258349: Opening ipv4 listen socket on port 1883.
+1661258349: Opening ipv6 listen socket on port 1883.
+1661258349: mosquitto version 2.0.15 running
+1661258375: New connection from 127.0.0.1:57892 on port 1883.
+1661258375: New client connected from 127.0.0.1:57892 as auto-01202E96-CB22-63C9-750B-25AF7F4B6975 (p2, c1, k60).
+1661258376: Client auto-01202E96-CB22-63C9-750B-25AF7F4B6975 disconnected.
+1661258530: mosquitto version 2.0.15 terminating
+1661258530: Saving in-memory database to /mosquitto/data/mosquitto.db.
+1661258530: mosquitto version 2.0.15 starting
+1661258530: Config loaded from /mosquitto/config/mosquitto.conf.
+1661258530: Opening ipv4 listen socket on port 9001.
+1661258530: Opening ipv6 listen socket on port 9001.
+1661258530: Opening ipv4 listen socket on port 1883.
+1661258530: Opening ipv6 listen socket on port 1883.
+1661258530: mosquitto version 2.0.15 running
+1661258545: New connection from 127.0.0.1:57894 on port 1883.
+1661258545: New client connected from 127.0.0.1:57894 as auto-67029503-E25A-0815-1A81-46FE915222A6 (p2, c1, k60).

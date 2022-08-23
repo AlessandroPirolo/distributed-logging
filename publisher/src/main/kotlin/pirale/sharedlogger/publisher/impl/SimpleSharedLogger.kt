@@ -8,8 +8,6 @@ import java.util.concurrent.LinkedBlockingQueue
 class SimpleSharedLogger(private val logRecordListMqttClient: LogRecordListMqttClient) : SharedLogger {
 
     override suspend fun put(logRecord: LogRecord) {
-        /*var queue = LinkedBlockingQueue<List<LogRecord>>(1)
-        queue.add(listOf(logRecord))*/
         logRecordListMqttClient.publish(mutableListOf(logRecord) )
     }
 }

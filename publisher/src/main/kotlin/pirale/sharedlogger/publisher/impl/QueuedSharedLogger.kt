@@ -29,7 +29,7 @@ class QueuedSharedLogger(private val mqttClient: LogRecordListMqttClient, size: 
                 last = lr
             }
             val emitCondition = list.count() == 10 ||
-                    (list.isNotEmpty() && lastSubmission.isBefore(t.minusMillis(50)))
+                    (list.isNotEmpty() && lastSubmission.isBefore(t.minusMillis(500)))
             if (emitCondition) {
                 emit(list)
                 lastSubmission = Instant.now()
@@ -37,27 +37,16 @@ class QueuedSharedLogger(private val mqttClient: LogRecordListMqttClient, size: 
             }
         }.onEach { lrs ->
             try {
-
-                //val logQueue = LinkedBlockingQueue<List<LogRecord>>(1)
-                //logQueue.add(lrs)
-                //mqttClient.publish(logQueue)
                 mqttClient.publish(lrs)
             } catch (e: MqttException) {
                 println("Failed to publish the message")
-                //errorLog = LogRecord(3, "${lrs.count()} messages have been lost", mapOf<String,String>("type" to "logs deleted"), LocalDateTime.now())
             }
         }
+        GlobalScope.launch { flow.collect() }
 
     }
 
-    private suspend fun start() { this.flow.collect() }
     override suspend fun put(logRecord: LogRecord) {
-        GlobalScope.launch {
-            start()
-            delay(10)
-        }
-
         channel.send(logRecord)
-
     }
 }
