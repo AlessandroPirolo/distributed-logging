@@ -1,7 +1,5 @@
 package pirale.sharedlogger.publisher
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import org.eclipse.paho.client.mqttv3.*
 import org.eclipse.paho.client.mqttv3.persist.MqttDefaultFilePersistence
 import pirale.sharedlogger.publisher.impl.DummySharedLogger
@@ -27,8 +25,11 @@ class SharedLoggerFactory {
                 SimpleSharedLogger(logRecordListMqttClient)
             }
             "queued" -> {
-                //val sender = SendChannelFactory(logRecordListMqttClient, Integer.parseInt(System.getProperties()["channelSize"].toString())).create()
-                QueuedSharedLogger(logRecordListMqttClient, Integer.parseInt(properties["channelSize"].toString()), properties["delayMillis"].toString().toLong())
+                QueuedSharedLogger(
+                    logRecordListMqttClient,
+                    Integer.parseInt(properties["channelSize"].toString()),
+                    properties["delayMillis"].toString().toLong()
+                )
             }
             else -> {
                 SimpleSharedLogger(logRecordListMqttClient)

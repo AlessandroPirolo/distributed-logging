@@ -16,7 +16,9 @@ class LogRecordListMqttClient(
 
     private object callback : MqttCallbackExtended {
         override fun connectComplete(reconnect: Boolean, serverURI: String?) {}
-        override fun connectionLost(cause: Throwable) {}
+        override fun connectionLost(cause: Throwable) {
+            //println("Connection lost")
+        }
         override fun messageArrived(topic: String, message: MqttMessage) {}
         override fun deliveryComplete(token: IMqttDeliveryToken) {}
     }
@@ -28,10 +30,8 @@ class LogRecordListMqttClient(
     }
 
     fun publish(logs: MutableList<LogRecord>) {
-        if (!client.isConnected) { client.reconnect() }
         MqttMessage().apply {
             this.payload = logs.map { log -> serializer.toByteArray(log) }.reduce { ba1, ba2 -> ba1 + ba2 }
-            println(payload.size)
         }.run {
             client.publish(topic, payload, 1, false)
         }
