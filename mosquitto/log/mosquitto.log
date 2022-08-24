@@ -2194,3 +2194,256 @@
 1661270657: New client connected from 172.21.0.1:44096 as auto-1649E799-F8D0-BAA5-814B-1F4192083A25 (p2, c1, k60).
 1661270657: Client auto-1649E799-F8D0-BAA5-814B-1F4192083A25 closed its connection.
 1661270942: Client paho983356722179200 closed its connection.
+1661362188: mosquitto version 2.0.14 starting
+1661362188: Config loaded from /mosquitto/config/mosquitto.conf.
+1661362188: Opening ipv4 listen socket on port 9001.
+1661362188: Opening ipv6 listen socket on port 9001.
+1661362188: Opening ipv4 listen socket on port 1883.
+1661362188: Opening ipv6 listen socket on port 1883.
+1661362188: mosquitto version 2.0.14 running
+1661362303: New connection from 172.21.0.1:51648 on port 1883.
+1661362304: New client connected from 172.21.0.1:51648 as id (p2, c1, k60).
+1661362336: New connection from 172.21.0.1:51904 on port 1883.
+1661362336: New client connected from 172.21.0.1:51904 as paho1075079275308900 (p2, c1, k60).
+1661362362: Client paho1075079275308900 closed its connection.
+1661362432: Client id closed its connection.
+1661362444: New connection from 172.21.0.1:52726 on port 1883.
+1661362444: New client connected from 172.21.0.1:52726 as id (p2, c1, k60).
+1661362451: New connection from 172.21.0.1:52788 on port 1883.
+1661362451: New client connected from 172.21.0.1:52788 as paho1075194320667299 (p2, c1, k60).
+1661362473: mosquitto version 2.0.14 terminating
+1661362483: mosquitto version 2.0.14 starting
+1661362483: Config loaded from /mosquitto/config/mosquitto.conf.
+1661362483: Opening ipv4 listen socket on port 9001.
+1661362483: Opening ipv6 listen socket on port 9001.
+1661362483: Opening ipv4 listen socket on port 1883.
+1661362483: Opening ipv6 listen socket on port 1883.
+1661362483: mosquitto version 2.0.14 running
+1661362483: New connection from 172.21.0.1:53038 on port 1883.
+1661362484: New client connected from 172.21.0.1:53038 as paho1075194320667299 (p2, c1, k60).
+1661362489: Client paho1075194320667299 closed its connection.
+1661362841: New connection from 172.21.0.1:55776 on port 1883.
+1661362841: New client connected from 172.21.0.1:55776 as paho1075584169019100 (p2, c1, k60).
+1661362845: New connection from 172.21.0.1:55812 on port 1883.
+1661362846: New client connected from 172.21.0.1:55812 as id (p2, c1, k60).
+1661362850: mosquitto version 2.0.14 terminating
+1661362859: mosquitto version 2.0.14 starting
+1661362859: Config loaded from /mosquitto/config/mosquitto.conf.
+1661362859: Opening ipv4 listen socket on port 9001.
+1661362859: Opening ipv6 listen socket on port 9001.
+1661362859: Opening ipv4 listen socket on port 1883.
+1661362859: Opening ipv6 listen socket on port 1883.
+1661362859: mosquitto version 2.0.14 running
+1661362859: New connection from 172.21.0.1:55926 on port 1883.
+1661362860: New client connected from 172.21.0.1:55926 as paho1075584169019100 (p2, c1, k60).
+1661362865: New connection from 172.21.0.1:55966 on port 1883.
+1661362866: New client connected from 172.21.0.1:55966 as id (p2, c1, k60).
+1661362885: New connection from 172.21.0.1:56116 on port 1883.
+1661362885: Client id already connected, closing old connection.
+1661362885: New client connected from 172.21.0.1:56116 as id (p2, c1, k60).
+1661362886: New connection from 172.21.0.1:56126 on port 1883.
+1661362886: Client id already connected, closing old connection.
+1661362886: New client connected from 172.21.0.1:56126 as id (p2, c1, k60).
+1661362887: New connection from 172.21.0.1:56136 on port 1883.
+1661362888: Client id already connected, closing old connection.
+1661362888: New client connected from 172.21.0.1:56136 as id (p2, c1, k60).
+1661362889: New connection from 172.21.0.1:56152 on port 1883.
+1661362889: Client id already connected, closing old connection.
+1661362889: New client connected from 172.21.0.1:56152 as id (p2, c1, k60).
+1661362890: New connection from 172.21.0.1:56166 on port 1883.
+1661362890: Client id already connected, closing old connection.
+1661362890: New client connected from 172.21.0.1:56166 as id (p2, c1, k60).
+1661362891: New connection from 172.21.0.1:56174 on port 1883.
+1661362892: Client id already connected, closing old connection.
+1661362892: New client connected from 172.21.0.1:56174 as id (p2, c1, k60).
+1661362893: New connection from 172.21.0.1:56188 on port 1883.
+1661362893: Client id already connected, closing old connection.
+1661362893: New client connected from 172.21.0.1:56188 as id (p2, c1, k60).
+1661362894: New connection from 172.21.0.1:56196 on port 1883.
+1661362894: Client id already connected, closing old connection.
+1661362894: New client connected from 172.21.0.1:56196 as id (p2, c1, k60).
+1661362895: mosquitto version 2.0.14 terminating
+1661362902: mosquitto version 2.0.14 starting
+1661362902: Config loaded from /mosquitto/config/mosquitto.conf.
+1661362902: Opening ipv4 listen socket on port 9001.
+1661362902: Opening ipv6 listen socket on port 9001.
+1661362902: Opening ipv4 listen socket on port 1883.
+1661362902: Opening ipv6 listen socket on port 1883.
+1661362902: mosquitto version 2.0.14 running
+1661362902: New connection from 172.21.0.1:56266 on port 1883.
+1661362903: New client connected from 172.21.0.1:56266 as paho1075584169019100 (p2, c1, k60).
+1661362905: New connection from 172.21.0.1:56290 on port 1883.
+1661362906: New client connected from 172.21.0.1:56290 as id (p2, c1, k60).
+1661362916: New connection from 172.21.0.1:56376 on port 1883.
+1661362916: Client id already connected, closing old connection.
+1661362916: New client connected from 172.21.0.1:56376 as id (p2, c1, k60).
+1661362917: New connection from 172.21.0.1:56392 on port 1883.
+1661362918: Client id already connected, closing old connection.
+1661362918: New client connected from 172.21.0.1:56392 as id (p2, c1, k60).
+1661362918: Client paho1075584169019100 closed its connection.
+1661362919: New connection from 172.21.0.1:56400 on port 1883.
+1661362919: Client id already connected, closing old connection.
+1661362919: New client connected from 172.21.0.1:56400 as id (p2, c1, k60).
+1661362920: New connection from 172.21.0.1:56416 on port 1883.
+1661362920: Client id already connected, closing old connection.
+1661362920: New client connected from 172.21.0.1:56416 as id (p2, c1, k60).
+1661362921: New connection from 172.21.0.1:56430 on port 1883.
+1661362922: Client id already connected, closing old connection.
+1661362922: New client connected from 172.21.0.1:56430 as id (p2, c1, k60).
+1661362923: New connection from 172.21.0.1:56438 on port 1883.
+1661362923: Client id already connected, closing old connection.
+1661362923: New client connected from 172.21.0.1:56438 as id (p2, c1, k60).
+1661362924: New connection from 172.21.0.1:56446 on port 1883.
+1661362924: Client id already connected, closing old connection.
+1661362924: New client connected from 172.21.0.1:56446 as id (p2, c1, k60).
+1661362925: New connection from 172.21.0.1:56464 on port 1883.
+1661362926: Client id already connected, closing old connection.
+1661362926: New client connected from 172.21.0.1:56464 as id (p2, c1, k60).
+1661362927: New connection from 172.21.0.1:56474 on port 1883.
+1661362927: Client id already connected, closing old connection.
+1661362927: New client connected from 172.21.0.1:56474 as id (p2, c1, k60).
+1661362928: New connection from 172.21.0.1:56484 on port 1883.
+1661362928: Client id already connected, closing old connection.
+1661362928: New client connected from 172.21.0.1:56484 as id (p2, c1, k60).
+1661362929: New connection from 172.21.0.1:56506 on port 1883.
+1661362930: Client id already connected, closing old connection.
+1661362930: New client connected from 172.21.0.1:56506 as id (p2, c1, k60).
+1661362931: New connection from 172.21.0.1:56514 on port 1883.
+1661362931: Client id already connected, closing old connection.
+1661362931: New client connected from 172.21.0.1:56514 as id (p2, c1, k60).
+1661362932: New connection from 172.21.0.1:56522 on port 1883.
+1661362932: Client id already connected, closing old connection.
+1661362932: New client connected from 172.21.0.1:56522 as id (p2, c1, k60).
+1661362933: New connection from 172.21.0.1:56530 on port 1883.
+1661362933: New client connected from 172.21.0.1:56530 as paho1075675804503700 (p2, c1, k60).
+1661362933: New connection from 172.21.0.1:56538 on port 1883.
+1661362934: Client id already connected, closing old connection.
+1661362934: New client connected from 172.21.0.1:56538 as id (p2, c1, k60).
+1661362935: New connection from 172.21.0.1:56548 on port 1883.
+1661362935: Client id already connected, closing old connection.
+1661362935: New client connected from 172.21.0.1:56548 as id (p2, c1, k60).
+1661362936: New connection from 172.21.0.1:56560 on port 1883.
+1661362936: Client id already connected, closing old connection.
+1661362936: New client connected from 172.21.0.1:56560 as id (p2, c1, k60).
+1661362937: New connection from 172.21.0.1:56576 on port 1883.
+1661362938: Client id already connected, closing old connection.
+1661362938: New client connected from 172.21.0.1:56576 as id (p2, c1, k60).
+1661362939: New connection from 172.21.0.1:56584 on port 1883.
+1661362939: Client id already connected, closing old connection.
+1661362939: New client connected from 172.21.0.1:56584 as id (p2, c1, k60).
+1661362940: New connection from 172.21.0.1:56600 on port 1883.
+1661362940: Client id already connected, closing old connection.
+1661362940: New client connected from 172.21.0.1:56600 as id (p2, c1, k60).
+1661362941: New connection from 172.21.0.1:56614 on port 1883.
+1661362942: Client id already connected, closing old connection.
+1661362942: New client connected from 172.21.0.1:56614 as id (p2, c1, k60).
+1661362943: New connection from 172.21.0.1:56622 on port 1883.
+1661362943: Client id already connected, closing old connection.
+1661362943: New client connected from 172.21.0.1:56622 as id (p2, c1, k60).
+1661362944: New connection from 172.21.0.1:56630 on port 1883.
+1661362944: Client id already connected, closing old connection.
+1661362944: New client connected from 172.21.0.1:56630 as id (p2, c1, k60).
+1661362945: New connection from 172.21.0.1:56648 on port 1883.
+1661362946: Client id already connected, closing old connection.
+1661362946: New client connected from 172.21.0.1:56648 as id (p2, c1, k60).
+1661362947: New connection from 172.21.0.1:56660 on port 1883.
+1661362947: Client id already connected, closing old connection.
+1661362947: New client connected from 172.21.0.1:56660 as id (p2, c1, k60).
+1661362948: New connection from 172.21.0.1:56670 on port 1883.
+1661362948: Client id already connected, closing old connection.
+1661362948: New client connected from 172.21.0.1:56670 as id (p2, c1, k60).
+1661362949: New connection from 172.21.0.1:56684 on port 1883.
+1661362950: Client id already connected, closing old connection.
+1661362950: New client connected from 172.21.0.1:56684 as id (p2, c1, k60).
+1661362951: New connection from 172.21.0.1:56700 on port 1883.
+1661362951: Client id already connected, closing old connection.
+1661362951: New client connected from 172.21.0.1:56700 as id (p2, c1, k60).
+1661362952: New connection from 172.21.0.1:56708 on port 1883.
+1661362952: Client id already connected, closing old connection.
+1661362952: New client connected from 172.21.0.1:56708 as id (p2, c1, k60).
+1661362953: New connection from 172.21.0.1:56718 on port 1883.
+1661362954: Client id already connected, closing old connection.
+1661362954: New client connected from 172.21.0.1:56718 as id (p2, c1, k60).
+1661362955: New connection from 172.21.0.1:56732 on port 1883.
+1661362955: Client id already connected, closing old connection.
+1661362955: New client connected from 172.21.0.1:56732 as id (p2, c1, k60).
+1661362955: Client paho1075675804503700 closed its connection.
+1661362956: New connection from 172.21.0.1:56742 on port 1883.
+1661362956: Client id already connected, closing old connection.
+1661362956: New client connected from 172.21.0.1:56742 as id (p2, c1, k60).
+1661362957: New connection from 172.21.0.1:56756 on port 1883.
+1661362958: Client id already connected, closing old connection.
+1661362958: New client connected from 172.21.0.1:56756 as id (p2, c1, k60).
+1661362959: Client id closed its connection.
+1661363979: New connection from 172.21.0.1:36340 on port 1883.
+1661363979: New client connected from 172.21.0.1:36340 as paho1076722439191800 (p2, c1, k60).
+1661363980: New connection from 172.21.0.1:36352 on port 1883.
+1661363980: New client connected from 172.21.0.1:36352 as id (p2, c1, k60).
+1661364007: New connection from 172.21.0.1:36552 on port 1883.
+1661364007: Client id already connected, closing old connection.
+1661364007: New client connected from 172.21.0.1:36552 as id (p2, c1, k60).
+1661364008: New connection from 172.21.0.1:36562 on port 1883.
+1661364008: Client id already connected, closing old connection.
+1661364008: New client connected from 172.21.0.1:36562 as id (p2, c1, k60).
+1661364009: New connection from 172.21.0.1:36578 on port 1883.
+1661364010: Client id already connected, closing old connection.
+1661364010: New client connected from 172.21.0.1:36578 as id (p2, c1, k60).
+1661364011: New connection from 172.21.0.1:36592 on port 1883.
+1661364011: Client id already connected, closing old connection.
+1661364011: New client connected from 172.21.0.1:36592 as id (p2, c1, k60).
+1661364012: New connection from 172.21.0.1:36602 on port 1883.
+1661364012: Client id already connected, closing old connection.
+1661364012: New client connected from 172.21.0.1:36602 as id (p2, c1, k60).
+1661364013: New connection from 172.21.0.1:36612 on port 1883.
+1661364014: Client id already connected, closing old connection.
+1661364014: New client connected from 172.21.0.1:36612 as id (p2, c1, k60).
+1661364015: New connection from 172.21.0.1:36626 on port 1883.
+1661364015: Client id already connected, closing old connection.
+1661364015: New client connected from 172.21.0.1:36626 as id (p2, c1, k60).
+1661364016: New connection from 172.21.0.1:36636 on port 1883.
+1661364016: Client id already connected, closing old connection.
+1661364016: New client connected from 172.21.0.1:36636 as id (p2, c1, k60).
+1661364017: New connection from 172.21.0.1:36650 on port 1883.
+1661364018: Client id already connected, closing old connection.
+1661364018: New client connected from 172.21.0.1:36650 as id (p2, c1, k60).
+1661364019: New connection from 172.21.0.1:36662 on port 1883.
+1661364019: Client id already connected, closing old connection.
+1661364019: New client connected from 172.21.0.1:36662 as id (p2, c1, k60).
+1661364020: New connection from 172.21.0.1:36678 on port 1883.
+1661364020: Client id already connected, closing old connection.
+1661364020: New client connected from 172.21.0.1:36678 as id (p2, c1, k60).
+1661364021: New connection from 172.21.0.1:36688 on port 1883.
+1661364022: Client id already connected, closing old connection.
+1661364022: New client connected from 172.21.0.1:36688 as id (p2, c1, k60).
+1661364023: New connection from 172.21.0.1:36700 on port 1883.
+1661364023: Client id already connected, closing old connection.
+1661364023: New client connected from 172.21.0.1:36700 as id (p2, c1, k60).
+1661364024: New connection from 172.21.0.1:36708 on port 1883.
+1661364024: Client id already connected, closing old connection.
+1661364024: New client connected from 172.21.0.1:36708 as id (p2, c1, k60).
+1661364025: New connection from 172.21.0.1:36722 on port 1883.
+1661364026: Client id already connected, closing old connection.
+1661364026: New client connected from 172.21.0.1:36722 as id (p2, c1, k60).
+1661364027: New connection from 172.21.0.1:36736 on port 1883.
+1661364027: Client id already connected, closing old connection.
+1661364027: New client connected from 172.21.0.1:36736 as id (p2, c1, k60).
+1661364028: New connection from 172.21.0.1:36746 on port 1883.
+1661364028: Client id already connected, closing old connection.
+1661364028: New client connected from 172.21.0.1:36746 as id (p2, c1, k60).
+1661364029: New connection from 172.21.0.1:36758 on port 1883.
+1661364030: Client id already connected, closing old connection.
+1661364030: New client connected from 172.21.0.1:36758 as id (p2, c1, k60).
+1661364031: New connection from 172.21.0.1:36774 on port 1883.
+1661364031: Client id already connected, closing old connection.
+1661364031: New client connected from 172.21.0.1:36774 as id (p2, c1, k60).
+1661364032: Client id closed its connection.
+1661364082: New connection from 172.21.0.1:37164 on port 1883.
+1661364082: New client connected from 172.21.0.1:37164 as id (p2, c1, k60).
+1661364086: New connection from 172.21.0.1:37198 on port 1883.
+1661364086: Client id already connected, closing old connection.
+1661364086: New client connected from 172.21.0.1:37198 as id (p2, c1, k60).
+1661364094: New connection from 172.21.0.1:37258 on port 1883.
+1661364094: Client id already connected, closing old connection.
+1661364094: New client connected from 172.21.0.1:37258 as id (p2, c1, k60).
+1661364101: Client id closed its connection.
+1661364105: Client paho1076722439191800 closed its connection.
