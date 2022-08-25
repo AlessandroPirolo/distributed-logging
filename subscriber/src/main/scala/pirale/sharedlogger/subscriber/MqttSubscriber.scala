@@ -1,14 +1,15 @@
 package pirale.sharedlogger.subscriber
 
+
 import akka.actor.typed.Behavior
-import akka.actor.typed.scaladsl.Behaviors
+import akka.actor.typed.scaladsl.{Behaviors, LoggerOps}
 import akka.stream.alpakka.mqtt.scaladsl.MqttSource
 import akka.stream.alpakka.mqtt.{MqttConnectionSettings, MqttQoS, MqttSubscriptions}
 import akka.stream.scaladsl.{Keep, Sink}
 import akka.stream.{KillSwitches, Materializer, SystemMaterializer, UniqueKillSwitch}
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence
+import org.slf4j.LoggerFactory
 import pirale.sharedlogger.subscriber.serialization.LogPBSerializer
-
 import scala.concurrent.duration.FiniteDuration
 
 
@@ -26,7 +27,7 @@ object MqttSubscriber {
 
   final case class ToStop(killSwitch: UniqueKillSwitch, mat: Materializer) extends Data
 
-  //implicit private val system: ActorSystem = ActorSystem("QuickStart")
+  private var logger = LoggerFactory.getLogger(this.getClass)
 
   private val serializer: LogSerializer = new LogPBSerializer()
 
@@ -40,15 +41,16 @@ object MqttSubscriber {
     connectionSettings
       .withClientId(clientId = "id")
       .withCleanSession(true)
-      //.withAutomaticReconnect(true)
-      //.withConnectionTimeout(FiniteDuration(50, "millis")),
+      .withAutomaticReconnect(true)
+      .withConnectionTimeout(FiniteDuration(50, "millis"))
       ,
     MqttSubscriptions("ciao", MqttQoS.AtLeastOnce),
-    bufferSize = 8
+    bufferSize = 30
   ).viaMat(KillSwitches.single)(Keep.right)
     .toMat(Sink.foreach(m => {
+      m.ack()
       val log = serializer.parseFrom(m.message.payload.toArrayUnsafe())
-      println(log)
+      save(log)
     })
     )(Keep.left)
 
@@ -84,6 +86,21 @@ object MqttSubscriber {
         println("Behavior unhandled")
         Behaviors.unhandled
     }
+
+  private def save(logRecord: LogRecord): Unit = {
+
+    logRecord.logLevel match {
+        case 0 => logger.debug2(" {} {} tags: [{}] ", logRecord.msg, logRecord.tags)
+        case 1 => logger.trace2(" {} {} tags: [{}] ", logRecord.msg, logRecord.tags)
+        case 2 => logger.info2(" {} {} tags: [{}] ", logRecord.msg, logRecord.tags)
+        case 3 => logger.warn2(" {} {} tags: [{}] ", logRecord.msg, logRecord.tags)
+        case 4 => logger.error2(" {} {} tags: [{}] ", logRecord.msg, logRecord.tags)
+      /*case 5 => logger.off("Received message: [{}]", message)
+        case 6 => logger.none("Received message: [{}]", message)*/
+        case _ => logger.info2(" {} {} tags: [{}] ", logRecord.msg, logRecord.tags)
+      }
+
+  }
 
 
 }

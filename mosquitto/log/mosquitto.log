@@ -2447,3 +2447,164 @@
 1661364094: New client connected from 172.21.0.1:37258 as id (p2, c1, k60).
 1661364101: Client id closed its connection.
 1661364105: Client paho1076722439191800 closed its connection.
+1661375759: mosquitto version 2.0.14 terminating
+1661428920: mosquitto version 2.0.14 starting
+1661428920: Config loaded from /mosquitto/config/mosquitto.conf.
+1661428920: Opening ipv4 listen socket on port 9001.
+1661428920: Opening ipv6 listen socket on port 9001.
+1661428920: Opening ipv4 listen socket on port 1883.
+1661428920: Opening ipv6 listen socket on port 1883.
+1661428920: mosquitto version 2.0.14 running
+1661428963: New connection from 172.21.0.1:55652 on port 1883.
+1661428963: New client connected from 172.21.0.1:55652 as id (p2, c1, k60).
+1661429075: New connection from 172.21.0.1:56508 on port 1883.
+1661429075: New client connected from 172.21.0.1:56508 as paho1141827360609200 (p2, c1, k60).
+1661429117: Client paho1141827360609200 closed its connection.
+1661429122: New connection from 172.21.0.1:56872 on port 1883.
+1661429123: New client connected from 172.21.0.1:56872 as paho1141874726868200 (p2, c1, k60).
+1661429155: Client paho1141874726868200 closed its connection.
+1661429167: New connection from 172.21.0.1:57212 on port 1883.
+1661429167: New client connected from 172.21.0.1:57212 as paho1141919244113800 (p2, c1, k60).
+1661429208: New connection from 172.21.0.1:57532 on port 1883.
+1661429209: Client id already connected, closing old connection.
+1661429209: New client connected from 172.21.0.1:57532 as id (p2, c1, k60).
+1661429251: Client id closed its connection.
+1661429363: New connection from 172.21.0.1:58720 on port 1883.
+1661429363: New client connected from 172.21.0.1:58720 as id (p2, c1, k60).
+1661429409: Client id closed its connection.
+1661429443: New connection from 172.21.0.1:59336 on port 1883.
+1661429443: New client connected from 172.21.0.1:59336 as id (p2, c1, k60).
+1661429543: Client id closed its connection.
+1661429555: New connection from 172.21.0.1:60188 on port 1883.
+1661429555: New client connected from 172.21.0.1:60188 as id (p2, c1, k60).
+1661429615: Client id closed its connection.
+1661429632: New connection from 172.21.0.1:60784 on port 1883.
+1661429633: New client connected from 172.21.0.1:60784 as id (p2, c1, k60).
+1661429651: Client id closed its connection.
+1661429681: New connection from 172.21.0.1:32930 on port 1883.
+1661429682: New client connected from 172.21.0.1:32930 as id (p2, c1, k60).
+1661429712: Client id closed its connection.
+1661429794: New connection from 172.21.0.1:33792 on port 1883.
+1661429795: New client connected from 172.21.0.1:33792 as id (p2, c1, k60).
+1661429906: Client id closed its connection.
+1661429909: Client paho1141919244113800 closed its connection.
+1661430059: mosquitto version 2.0.14 terminating
+1661445353: mosquitto version 2.0.14 starting
+1661445353: Config loaded from /mosquitto/config/mosquitto.conf.
+1661445353: Opening ipv4 listen socket on port 9001.
+1661445353: Opening ipv6 listen socket on port 9001.
+1661445353: Opening ipv4 listen socket on port 1883.
+1661445353: Opening ipv6 listen socket on port 1883.
+1661445353: mosquitto version 2.0.14 running
+1661445380: New connection from 172.21.0.1:55114 on port 1883.
+1661445380: New client connected from 172.21.0.1:55114 as id (p2, c1, k60).
+1661445383: New connection from 172.21.0.1:55134 on port 1883.
+1661445383: New client connected from 172.21.0.1:55134 as paho1158134493172700 (p2, c1, k60).
+1661445394: Client id disconnected.
+1661445396: New connection from 172.21.0.1:55238 on port 1883.
+1661445396: New client connected from 172.21.0.1:55238 as id (p2, c1, k60).
+1661445408: Client paho1158134493172700 closed its connection.
+1661445411: New connection from 172.21.0.1:55354 on port 1883.
+1661445411: New client connected from 172.21.0.1:55354 as paho1158163794637000 (p2, c1, k60).
+1661445438: Client id closed its connection.
+1661445459: New connection from 172.21.0.1:55742 on port 1883.
+1661445459: New client connected from 172.21.0.1:55742 as id (p2, c1, k60).
+1661445465: Client id disconnected.
+1661445467: New connection from 172.21.0.1:55802 on port 1883.
+1661445467: New client connected from 172.21.0.1:55802 as id (p2, c1, k60).
+1661445469: Client id disconnected.
+1661445547: New connection from 172.21.0.1:56416 on port 1883.
+1661445547: New client connected from 172.21.0.1:56416 as id (p2, c1, k60).
+1661445556: mosquitto version 2.0.14 terminating
+1661445569: mosquitto version 2.0.14 starting
+1661445569: Config loaded from /mosquitto/config/mosquitto.conf.
+1661445569: Opening ipv4 listen socket on port 9001.
+1661445569: Opening ipv6 listen socket on port 9001.
+1661445569: Opening ipv4 listen socket on port 1883.
+1661445569: Opening ipv6 listen socket on port 1883.
+1661445569: mosquitto version 2.0.14 running
+1661445569: New connection from 172.21.0.1:56590 on port 1883.
+1661445569: New client connected from 172.21.0.1:56590 as paho1158163794637000 (p2, c1, k60).
+1661445617: New connection from 172.21.0.1:56962 on port 1883.
+1661445618: New client connected from 172.21.0.1:56962 as id (p2, c1, k60).
+1661445624: mosquitto version 2.0.14 terminating
+1661445634: mosquitto version 2.0.14 starting
+1661445634: Config loaded from /mosquitto/config/mosquitto.conf.
+1661445634: Opening ipv4 listen socket on port 9001.
+1661445634: Opening ipv6 listen socket on port 9001.
+1661445634: Opening ipv4 listen socket on port 1883.
+1661445634: Opening ipv6 listen socket on port 1883.
+1661445634: mosquitto version 2.0.14 running
+1661445634: New connection from 172.21.0.1:57092 on port 1883.
+1661445635: New client connected from 172.21.0.1:57092 as paho1158163794637000 (p2, c1, k60).
+1661445639: New connection from 172.21.0.1:57140 on port 1883.
+1661445639: New client connected from 172.21.0.1:57140 as id (p2, c1, k60).
+1661445657: Client id disconnected.
+1661445658: New connection from 172.21.0.1:57288 on port 1883.
+1661445659: New client connected from 172.21.0.1:57288 as id (p2, c1, k60).
+1661445676: Client id disconnected.
+1661445684: Client paho1158163794637000 closed its connection.
+1661445696: New connection from 172.21.0.1:57574 on port 1883.
+1661445696: New client connected from 172.21.0.1:57574 as paho1158448591575600 (p2, c1, k60).
+1661446147: New connection from 172.21.0.1:32786 on port 1883.
+1661446147: New client connected from 172.21.0.1:32786 as id (p2, c1, k60).
+1661446183: Client id closed its connection.
+1661446199: New connection from 172.21.0.1:33186 on port 1883.
+1661446200: New client connected from 172.21.0.1:33186 as id (p2, c1, k60).
+1661446231: Client id disconnected.
+1661446289: New connection from 172.21.0.1:33874 on port 1883.
+1661446290: New client connected from 172.21.0.1:33874 as id (p2, c1, k60).
+1661446302: Client id closed its connection.
+1661446384: New connection from 172.21.0.1:34596 on port 1883.
+1661446384: New client connected from 172.21.0.1:34596 as id (p2, c1, k60).
+1661446397: Client id closed its connection.
+1661446444: New connection from 172.21.0.1:35056 on port 1883.
+1661446444: New client connected from 172.21.0.1:35056 as id (p2, c1, k60).
+1661446462: Client id disconnected.
+1661446506: New connection from 172.21.0.1:35530 on port 1883.
+1661446506: New client connected from 172.21.0.1:35530 as id (p2, c1, k60).
+1661446515: Client id disconnected.
+1661446572: New connection from 172.21.0.1:36042 on port 1883.
+1661446572: New client connected from 172.21.0.1:36042 as id (p2, c1, k60).
+1661446603: Client id disconnected.
+1661447665: New connection from 172.21.0.1:44384 on port 1883.
+1661447665: New client connected from 172.21.0.1:44384 as id (p2, c1, k60).
+1661447672: Client id disconnected.
+1661447742: New connection from 172.21.0.1:44978 on port 1883.
+1661447743: New client connected from 172.21.0.1:44978 as id (p2, c1, k60).
+1661447776: Client id disconnected.
+1661447884: New connection from 172.21.0.1:46064 on port 1883.
+1661447884: New client connected from 172.21.0.1:46064 as id (p2, c1, k60).
+1661447892: Client id disconnected.
+1661448032: New connection from 172.21.0.1:47198 on port 1883.
+1661448032: New client connected from 172.21.0.1:47198 as id (p2, c1, k60).
+1661448127: Client id disconnected.
+1661448214: New connection from 172.21.0.1:48584 on port 1883.
+1661448214: New client connected from 172.21.0.1:48584 as id (p2, c1, k60).
+1661448250: Client id disconnected.
+1661448365: New connection from 172.21.0.1:49738 on port 1883.
+1661448365: New client connected from 172.21.0.1:49738 as id (p2, c1, k60).
+1661448370: Client id closed its connection.
+1661448477: Client paho1158448591575600 closed its connection.
+1661448494: New connection from 172.21.0.1:50726 on port 1883.
+1661448494: New client connected from 172.21.0.1:50726 as id (p2, c1, k60).
+1661448498: New connection from 172.21.0.1:50770 on port 1883.
+1661448498: New client connected from 172.21.0.1:50770 as paho1161250370683100 (p2, c1, k60).
+1661448520: Client paho1161250370683100 closed its connection.
+1661448523: New connection from 172.21.0.1:50954 on port 1883.
+1661448523: New client connected from 172.21.0.1:50954 as paho1161275629675700 (p2, c1, k60).
+1661448570: Client id closed its connection.
+1661448582: New connection from 172.21.0.1:51406 on port 1883.
+1661448582: New client connected from 172.21.0.1:51406 as id (p2, c1, k60).
+1661448590: Client id disconnected.
+1661448761: New connection from 172.21.0.1:52778 on port 1883.
+1661448761: New client connected from 172.21.0.1:52778 as id (p2, c1, k60).
+1661448775: Client id disconnected.
+1661448833: New connection from 172.21.0.1:53328 on port 1883.
+1661448834: New client connected from 172.21.0.1:53328 as id (p2, c1, k60).
+1661448864: Client id closed its connection.
+1661448925: New connection from 172.21.0.1:54028 on port 1883.
+1661448925: New client connected from 172.21.0.1:54028 as id (p2, c1, k60).
+1661448963: Client id disconnected.
+1661449033: Client paho1161275629675700 closed its connection.
+1661449034: mosquitto version 2.0.14 terminating

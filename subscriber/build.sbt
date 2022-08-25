@@ -13,7 +13,9 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
   "ch.qos.logback" % "logback-classic" % "1.2.11" % Runtime,
   "com.thesamet.scalapb" %% "scalapb-runtime" % scalapb.compiler.Version.scalapbVersion % "protobuf",
-  "com.google.protobuf" % "protobuf-java" % "3.21.5"
+  "com.google.protobuf" % "protobuf-java" % "3.21.5",
+  "com.typesafe.akka" %% "akka-actor-typed" % AkkaVersion,
+  "ch.qos.logback" % "logback-classic" % "1.2.11"
 )
 
 ThisBuild / version       := "0.1.0-SNAPSHOT"

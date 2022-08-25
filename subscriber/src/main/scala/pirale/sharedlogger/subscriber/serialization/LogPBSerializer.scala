@@ -16,6 +16,7 @@ class LogPBSerializer extends LogSerializer {
 
   override def parseFrom(arr: Array[Byte]): LogRecord = {
     val tmpLog = Log.parseFrom(arr)
+
     val date = Instant
       .ofEpochSecond(tmpLog.timeStamp.get.seconds, tmpLog.timeStamp.get.nanos)
       .atZone(ZoneId.of("Europe/Rome"))
