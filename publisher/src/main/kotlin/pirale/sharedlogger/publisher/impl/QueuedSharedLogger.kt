@@ -78,7 +78,6 @@ class QueuedSharedLogger(private val mqttClient: LogRecordListMqttClient, size: 
             isSuccess = false
             if(lrs[0].logLevel != 4) { errorCount += lrs.count() }
             setErrorLog()
-            //println("Failed to publish the message")
         }
         return isSuccess
     }

@@ -1,7 +1,4 @@
-package pirale.sharedlogger.subscriber
-
 import akka.actor.typed.ActorSystem
-
 import scala.io.StdIn.readLine
 
 object MyApp extends App {
@@ -15,16 +12,12 @@ object MyApp extends App {
     var i = readLine()
     i match {
       case "s" => mqttSubscriber ! MqttSubscriber.Stop()
-      case "v" => mqttSubscriber ! MqttSubscriber.Start() //to restart use supervisor strategy
+      case "v" => mqttSubscriber ! MqttSubscriber.Start()
       case "q" => {
         mqttSubscriber ! MqttSubscriber.Quit()
         sys.exit(0)
       }
-      case _ => println("nulla")
+      case _ => println("Behavior unhandled")
     }
   }
-
-  //system.terminate()
-
-
 }

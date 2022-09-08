@@ -16,9 +16,7 @@ class LogRecordListMqttClient(
 
     private object callback : MqttCallbackExtended {
         override fun connectComplete(reconnect: Boolean, serverURI: String?) {}
-        override fun connectionLost(cause: Throwable) {
-            //println("Connection lost")
-        }
+        override fun connectionLost(cause: Throwable) {}
         override fun messageArrived(topic: String, message: MqttMessage) {}
         override fun deliveryComplete(token: IMqttDeliveryToken) {}
     }
