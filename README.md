@@ -19,8 +19,11 @@ The system is partially resilient, meaning that both subscriber and publisher au
 -[Kotlin](https://kotlinlang.org/): version 1.7.0
 
 -[Scala](https://www.scala-lang.org/): version 3.1.2
+  - [Akka](https://doc.akka.io/docs/akka/current/index.html): version 2.6.20 
 
 -[Eclipse Mosquitto](https://mosquitto.org/): version 2.0.14
+
+-[Protobuf](https://developers.google.com/protocol-buffers): version 3.21.5
 
 # API docs
 
@@ -131,7 +134,8 @@ Concrete log serializer class implementing `LogSerializer` and its methods.
 
 # Example of usage
 
-# Bugs
+## Bugs
+After a disconnection event, the MQTT subscriber doens't receive messages from the broker anymore. Stopping the service and Restarting it makes the subscriber receives messages again.
 
 # License
 
