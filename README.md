@@ -133,6 +133,65 @@ Case class for representing a log.
 Concrete log serializer class implementing `LogSerializer` and its methods.
 
 # Example of usage
+  
+See the examples in the `examples/` directory.
+
+Here's an example of a publisher:
+
+    fun msg() = LogRecord(2, "Hi, I'm a log", mapOf("id" to "mqttTest"), LocalDateTime.now())
+
+    val sharedLogger: SharedLogger = SharedLoggerFactory().create()
+    GlobalScope.launch {
+      while (isActive) {
+        sharedLogger.put(msg())
+        delay(50)
+      }
+    }
+
+In brief, as shown in the example:
+
+* a log is created using `LogRecord` and providing a log type, a message, a list of tags and the time.
+* apps can create a shared logger using the method `create()` provided by `SharedLoggerFactory`. The shared logger is built according to the Java system properties a user can customize, see [System properties](#system-properties).
+* eventually, a log is sent using `put()` method provided by `SharedLogger` interface.
+
+On the other hand, the following is an istance of a subscriber:
+
+    val mqttSubscriber: ActorSystem[MqttSubscriber.Event] =
+        ActorSystem(MqttSubscriber(), "mqttSubscriber")
+
+    println("press v to start, s to stop and q to quit")
+
+    while (true) {
+      var i = readLine()
+      i match {
+        case "s" => mqttSubscriber ! MqttSubscriber.Stop()
+        case "v" => mqttSubscriber ! MqttSubscriber.Start()
+        case "q" => {
+          mqttSubscriber ! MqttSubscriber.Quit()
+          sys.exit(0)
+        }
+        case _ => println("Behavior unhandled")
+      }
+    }
+
+Briefly:
+
+* apps create a subscriber starting an `ActorSystem` to host it.
+* the subscriber is started sending to it a `Start()` event. Eventually, it can be either stopped using a `Stop()` event or killed using a `Quit()` event.
+
+
+## System properties
+
+Java system properties are set on the Java command line using the `-Dproperty=value` syntax. Where the `property` are the following: 
+
+* `type`: set the type of shared logger you want to use. It can be **queued**, **simple**, **dummy**.
+* `client`: set the MQTT client url.
+* `topic`: set the MQTT topic to subscribe to.
+* `channelSize`: set the size of channel. Just for `QueuedSharedLogger`.
+* `delayMillis`: set the delay after which an element will be produced. Just for `QueuedSharedLogger`.
+* `autoReconnection`: set whether the client will automatically attempt to reconnect to the server if the connection is lost.
+* `reconnectionDelay`: set the maximum time to wait between reconnects.
+
 
 ## Bugs
 After a disconnection event, the MQTT subscriber doens't receive messages from the broker anymore. Stopping the service and Restarting it makes the subscriber receives messages again.
