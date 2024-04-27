@@ -34,8 +34,4 @@ class LogRecordListMqttClient(
             client.publish(topic, payload, 1, false)
         }
     }
-
-    fun disconnect() {
-        client.disconnect()
-    }
 }
